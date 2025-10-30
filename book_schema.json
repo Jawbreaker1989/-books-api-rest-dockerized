@@ -1,0 +1,79 @@
+{
+  "schema": "Book Object Schema",
+  "description": "Esquema para la gestión de libros en el sistema",
+  "version": "1.0",
+  "properties": {
+    "id": {
+      "type": "INTEGER",
+      "primaryKey": true,
+      "autoIncrement": true,
+      "allowNull": false,
+      "description": "Identificador único del libro"
+    },
+    "title": {
+      "type": "STRING",
+      "allowNull": false,
+      "description": "Título del libro"
+    },
+    "author": {
+      "type": "STRING",
+      "allowNull": false,
+      "description": "Autor del libro"
+    },
+    "isbn": {
+      "type": "STRING",
+      "allowNull": false,
+      "unique": true,
+      "description": "Código ISBN único del libro"
+    },
+    "publicationYear": {
+      "type": "INTEGER",
+      "allowNull": false,
+      "description": "Año de publicación del libro (campo numérico para búsquedas)"
+    },
+    "pages": {
+      "type": "INTEGER",
+      "allowNull": false,
+      "description": "Número de páginas del libro (campo numérico para operaciones agrupadas)"
+    },
+    "price": {
+      "type": "DECIMAL(10,2)",
+      "allowNull": false,
+      "description": "Precio del libro (campo numérico para operaciones agrupadas)"
+    },
+    "genre": {
+      "type": "STRING",
+      "allowNull": false,
+      "description": "Género literario del libro"
+    },
+    "publisher": {
+      "type": "STRING",
+      "allowNull": false,
+      "description": "Editorial que publica el libro"
+    },
+    "createdAt": {
+      "type": "DATETIME",
+      "allowNull": false,
+      "description": "Fecha de creación del registro (auto-generado por Sequelize)"
+    },
+    "updatedAt": {
+      "type": "DATETIME",
+      "allowNull": false,
+      "description": "Fecha de última actualización del registro (auto-generado por Sequelize)"
+    }
+  },
+  "numericFields": {
+    "searchable": ["publicationYear", "pages"],
+    "aggregatable": ["price", "pages"]
+  },
+  "validations": {
+    "title": "Requerido",
+    "author": "Requerido",
+    "isbn": "Requerido y único",
+    "publicationYear": "Requerido, debe ser un entero",
+    "pages": "Requerido, debe ser un entero positivo",
+    "price": "Requerido, debe ser un decimal con 2 decimales",
+    "genre": "Requerido",
+    "publisher": "Requerido"
+  }
+}

@@ -1,0 +1,42 @@
+TALLER EVALUABLE - DOCKERIZACIÓN API REST LIBROS
+
+REPOSITORIO GITHUB:
+[PENDIENTE: Subir código a GitHub y colocar URL aquí]
+
+IMAGEN DOCKERHUB:
+[PENDIENTE: Construir y subir imagen Docker, colocar URL aquí]
+
+INSTRUCCIONES PARA EVALUACIÓN:
+
+1. CLONAR REPOSITORIO:
+   git clone [URL_DEL_REPOSITORIO]
+
+2. INSTALAR DEPENDENCIAS:
+   npm install
+
+3. EJECUTAR LOCALMENTE:
+   npm start
+   
+4. PROBAR ENDPOINTS:
+   - Base URL: http://localhost:3200/api
+   - Ver API_DOCUMENTATION.md para endpoints completos
+
+5. EJECUTAR CON DOCKER:
+   docker pull [tu-usuario]/books-api
+   docker run -p 3200:3200 [tu-usuario]/books-api
+
+ARCHIVOS INCLUIDOS:
+- book_schema.json: Esquema del objeto Libro
+- API_DOCUMENTATION.md: Documentación completa de endpoints
+- Dockerfile: Configuración para dockerización
+- Código fuente completo con todas las funcionalidades requeridas
+
+CUMPLIMIENTO DE REQUISITOS:
+✅ Gestión completa del objeto Libro (CRUD)
+✅ Búsquedas por criterios numéricos (año y páginas)
+✅ Operaciones agrupadas (SUM, COUNT, AVERAGE sobre precio y páginas)
+✅ Persistencia en SQLite
+✅ Endpoints REST con métodos HTTP
+✅ JavaScript modularizado con EMS
+✅ Dockerización completa
+✅ Esquema JSON del objeto definido
