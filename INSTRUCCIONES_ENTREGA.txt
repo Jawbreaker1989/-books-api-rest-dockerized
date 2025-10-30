@@ -1,7 +1,7 @@
 TALLER EVALUABLE - DOCKERIZACIÓN API REST LIBROS
 
 REPOSITORIO GITHUB:
-[PENDIENTE: Subir código a GitHub y colocar URL aquí]
+https://github.com/Jawbreaker1989/-books-api-rest-dockerized
 
 IMAGEN DOCKERHUB:
 [PENDIENTE: Construir y subir imagen Docker, colocar URL aquí]
@@ -9,7 +9,7 @@ IMAGEN DOCKERHUB:
 INSTRUCCIONES PARA EVALUACIÓN:
 
 1. CLONAR REPOSITORIO:
-   git clone [URL_DEL_REPOSITORIO]
+   git clone https://github.com/Jawbreaker1989/-books-api-rest-dockerized.git
 
 2. INSTALAR DEPENDENCIAS:
    npm install
