@@ -4,7 +4,7 @@ REPOSITORIO GITHUB:
 https://github.com/Jawbreaker1989/-books-api-rest-dockerized
 
 IMAGEN DOCKERHUB:
-[PENDIENTE: Construir y subir imagen Docker, colocar URL aquí]
+https://hub.docker.com/r/jawbreaker074/books-api
 
 INSTRUCCIONES PARA EVALUACIÓN:
 
@@ -22,8 +22,8 @@ INSTRUCCIONES PARA EVALUACIÓN:
    - Ver API_DOCUMENTATION.md para endpoints completos
 
 5. EJECUTAR CON DOCKER:
-   docker pull [tu-usuario]/books-api
-   docker run -p 3200:3200 [tu-usuario]/books-api
+   docker pull jawbreaker074/books-api:latest
+   docker run -p 3200:3200 jawbreaker074/books-api:latest
 
 ARCHIVOS INCLUIDOS:
 - book_schema.json: Esquema del objeto Libro
