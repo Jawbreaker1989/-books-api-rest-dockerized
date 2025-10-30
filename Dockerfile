@@ -1,6 +1,9 @@
 # Usa la imagen oficial de Node.js
 FROM node:18-alpine
 
+# Instalar dependencias necesarias para sqlite3
+RUN apk add --no-cache python3 make g++
+
 # Crear directorio de trabajo
 WORKDIR /app
 
@@ -8,7 +11,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Instalar dependencias
-RUN npm install --production
+RUN npm install --production && npm install sqlite3
 
 # Copiar el código fuente de la aplicación
 COPY . .
